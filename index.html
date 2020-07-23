@@ -15,8 +15,14 @@
                 return play;
 
             }
-            computerSelect = computerplay()
-            playerSelect = prompt("Type: Rock, Paper or Scissors")
+            let computerSelect = computerplay()
+            let choice = prompt("Type: Rock, Paper or Scissors")
+
+            function capitalize() {
+                return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+            }
+
+            let playerSelect = capitalize(choice)
 
             function playRound(playerSelect, computerSelect) {
                 if (playerSelect === "Rock" && computerSelect === "Scissors") {
@@ -42,6 +48,11 @@
 
             
             console.log(playRound(playerSelect, computerSelect));
+
+
+                function game()
+
+
 
         </script>
     </body>
