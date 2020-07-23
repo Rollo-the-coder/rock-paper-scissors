@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+            function computerplay() {
+                let myArray = [
+                    "Rock",
+                    "Paper",
+                    "Scissors"
+                ];
+                let play = myArray[Math.floor(Math.random()*myArray.length)];
+                return play;
+
+            }
+            computerSelect = computerplay()
+            playerSelect = prompt("Type: Rock, Paper or Scissors")
+
+            function playRound(playerSelect, computerSelect) {
+                if (playerSelect === "Rock" && computerSelect === "Scissors") {
+                    return "You Win! Rock beats Scissors";
+                } else if (playerSelect === "Rock" && computerSelect === "Paper") {
+                    return "You lose! Paper beats rock haha";
+                } else if (playerSelect === "Rock" && computerSelect === "Rock") {
+                    return "Its a draw! Play again";
+                } else if (playerSelect === "Paper" && computerSelect === "Rock") {
+                    return "You WIn! Paper beats rock";
+                } else if (playerSelect === "Paper" && computerSelect === "Scissors") {
+                    return "You lose! Scissors beats paper";
+                } else if (playerSelect === "Paper" && computerSelect === "Paper") {
+                    return "Its a draw! Play again";
+                } else if (playerSelect === "Scissors" && computerSelect === "Paper") {
+                    return "YOu win! Scissors beats paper";
+                } else if (playerSelect === "Scissors" && computerSelect === "Rock") {
+                    return "YOu lose! Rock beats Scissors";
+                } else if (playerSelect === "Scissors" && computerSelect === "Scissors") {
+                    return "Its a draw! Play again!";
+                } else return "Please type in one of the options correctly";
+                }
+
+            
+            console.log(playRound(playerSelect, computerSelect));
+
+        </script>
+    </body>
+</html>
